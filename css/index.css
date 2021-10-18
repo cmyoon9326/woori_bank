@@ -1,0 +1,135 @@
+header .top {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 0 26px;
+}
+header .top h1 {
+  float: left;
+  padding: 33px 0 0;
+}
+header .top h1 a:first-child {
+  margin-right: 28px;
+}
+header .top > div {
+  float: right;
+}
+header .control {
+  padding: 31px 24px 0 0;
+  float: left;
+}
+header .control h2 {
+  float: left;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  line-height: 36px;
+}
+header .control ul {
+  float: left;
+  padding: 0 0 0 9px;
+}
+header .control li {
+  float: left;
+  padding: 0 0 0 4px;
+}
+header .control li button[class] {
+  padding: 0;
+}
+header .control li button {
+  padding: 0 16px;
+  min-width: 36px;
+  height: 36px;
+  font-size: 14px;
+  color: #3190ce;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 36px;
+  /* 높이값만큼 border-radius를 준다. */
+  box-sizing: border-box;
+}
+header .sns {
+  float: left;
+  position: relative;
+  padding: 27px 0 0 7px;
+}
+header .sns::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 1px;
+  height: 30px;
+  background: #e3e3e3;
+}
+header .sns li {
+  float: left;
+  padding: 0 0 0 12px;
+}
+header .sns li img {
+  width: 46px;
+}
+header .btm {
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+header .btm > div {
+  margin: 0 auto;
+  width: 1200px;
+}
+header .btm .lnb {
+  float: left;
+}
+header .btm .lnb li {
+  float: left;
+}
+header .btm .lnb a {
+  display: block;
+  line-height: 59px;
+  padding: 0 40px;
+  font-size: 22px;
+  color: #333;
+}
+/* float을 주면 float을 준 부모(btm)의 높이는 초기화가 됨 */
+header .btm .spot {
+  float: right;
+  font-size: 0;
+  /* inline-block과 inline-block 사이에는 공간이 생김. 없애기 위해 font-size: 0을 넣어줌 */
+}
+header .btm .spot * {
+  vertical-align: middle;
+}
+header .btm .spot a {
+  display: inline-block;
+  /* 가로세로 길이 설정이 가능하려면 inline-block으로 변경해줘야함 */
+  padding: 0 25px;
+  line-height: 59px;
+  /* 글씨뿐만 아니라 여백도 클릭이 될 수 있게 처리 */
+  font-size: 15px;
+  color: #666;
+  position: relative;
+}
+header .btm .spot a ~ a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background: #e3e3e3;
+}
+header .btm .spot button {
+  /* button은 inline-block요소 */
+  width: 59px;
+  height: 59px;
+  /* button은 자동으로 세로중앙정렬됨. */
+  background: none;
+  color: #0066b3;
+  font-size: 26px;
+}
+/* 
+  1. 버튼과 링크의 차이점
+  a는 페이지 이동 , 버튼은 기능
+  2. 여백을 넣을 때 어느 방향을 넣는가에 따라 계산법이 달라짐 ex)오른쪽부분을 작업할 때 반대쪽(왼쪽)으로 여백을 준다.
+  3. 세로바(버티컬바)는 반드시 after 또는 before로 넣어준다.
+  4. 메뉴는 반드시 사용성을 고려해야함. */
