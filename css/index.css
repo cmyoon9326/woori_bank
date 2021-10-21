@@ -127,9 +127,86 @@ header .btm .spot button {
   color: #0066b3;
   font-size: 26px;
 }
+/* 콘텐츠 공통디자인 */
+.block > div {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 100px 0 0;
+}
+.block .tit {
+  text-align: center;
+}
+.block .tit h2 {
+  font-size: 38px;
+  color: #333;
+  line-height: 1;
+  margin: 0 0 28px;
+}
+.block .tit p {
+  font-size: 21px;
+  color: #666;
+  line-height: 1;
+  padding: 0 0 40px;
+  /* 한줄짜리는 줄간격을 초기화 시켜줘야한다. */
+}
+/* 금융서비스 */
+.service .banner > div {
+  width: 580px;
+  color: #fff;
+}
+/* float을 주면 float을 준 부모의 높이는 초기화가 됨 */
+.service .banner .left {
+  float: left;
+  background: url(../images/bg_ad1.jpg) no-repeat left top;
+  /* 배경이미지 기본 좌표 left top */
+}
+.service .banner .left div {
+  float: right;
+  background: linear-gradient(to right #3194d5 #4fb2f6);
+}
+.service .banner .right {
+  float: right;
+  background: url(../images/bg_ad2.jpg) no-repeat right top;
+}
+.service .banner .right div {
+  background: linear-gradient(to right #334da4 #3c62b3);
+}
+.service .banner div div {
+  padding: 37px 0 0;
+  box-sizing: border-box;
+  /* 높이에 padding이 들어가게 되면 높이가 플러스 알파가 되기 때문에 box-sizing을 넣어준다. */
+  width: 290px;
+  height: 280px;
+  text-align: center;
+}
+.service .banner h3 {
+  font-size: 24px;
+  line-height: 31px;
+}
+.service .banner p {
+  padding: 12px 0 15px;
+  font-size: 13px;
+  line-height: 24px;
+}
+.service .banner a {
+  display: block;
+  width: 140px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #064ca2;
+  border-radius: 7px;
+  margin: 0 auto;
+  /* 링크는 컬러가 안들어가기 때문에 직접지정해야함. */
+}
 /* 
   1. 버튼과 링크의 차이점
   a는 페이지 이동 , 버튼은 기능
   2. 여백을 넣을 때 어느 방향을 넣는가에 따라 계산법이 달라짐 ex)오른쪽부분을 작업할 때 반대쪽(왼쪽)으로 여백을 준다.
   3. 세로바(버티컬바)는 반드시 after 또는 before로 넣어준다.
   4. 메뉴는 반드시 사용성을 고려해야함. */
+/* 
+  확장성을 고려해서 유지보수가 쉽도록 만들기, 간소화하고 활용할 수 있도록 해야 함.
+  1.금융서비스 뿐만 아니라 다른 컨텐츠 제목과 설명 부분 스타일이 같음 (공통 잡기)
+  2.컨텐츠 가운데 정렬
+  3.H2(제목) 과 형제요소인 P, 여백 같은 디자인
+  */
