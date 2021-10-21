@@ -106,6 +106,7 @@ legend {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
 }
+/* .hide 화면에 보이지 않지만 화면낭독기가 읽을 수 있도록 처리 */
 hr {
   display: none;
 }

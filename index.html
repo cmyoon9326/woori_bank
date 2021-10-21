@@ -6,9 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우리은행 시니어플러스</title>
+    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/index.css">
+    <!-- Swiper JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- IE 지원 가능한 버전은 swiper 4.5.1까지 -->
+    <script src="js/swiper.js"></script>
+    <script src="js/default.js"></script>
 </head>
 
 <body>
@@ -30,7 +37,7 @@
                         <li><button>원본보기</button></li>
                     </ul>
                 </div>
-            <!--<i class="xi-plus"></i> "\e913"
+                <!--<i class="xi-plus"></i> "\e913"
                 <i class="xi-minus"></i> "\e91a"  -->
                 <!-- content를 개발자도구에서 확인할 수 있음 -->
                 <h2 class="hide">SNS</h2>
@@ -64,17 +71,54 @@
         </div>
     </header>
     <main>
-        <section>
-            <div class="swiper-container slide1">
+        <section class="visual">
+            <h2 class="hide">이벤트 및 광고</h2>
+            <div class="swiper slide1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/visual1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/visual1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/visual1.jpg" alt=""></div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images/visual1.jpg" alt="">
+                            <!-- IR기법으로 hide 사용 alt속성은 끊어읽기가 불가능 -->
+                            <div class="hide">
+                                시니어 플러스 홈페이지 오픈기념 이벤트
+                                2019년 9월 27일부터 10월 31일까지
+                                시니어플러스 홈페이지 오픈을 축하하는 예쁜 댓글을 달아주신 500분께
+                                스타벅스 카페라떼 교환권을 드립니다.
+                                클릭하시면 이벤트 페이지로 이동합니다.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images/visual2.jpg" alt="">
+                            <div class="hide">
+                                10월 특강 두번째
+                                행복한 삶에는 와인이 필요하다
+                                와인보다 맛있는 와인 이야기
+                                강사: 정하봉 (국가대표 1호 소믈리에)
+                                클릭하시면 특강 페이지로 이동합니다.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images/visual3.jpg" alt="">
+                            <div class="hide">
+                                시니어를 위한 맞춤 일자리 정보가 필요하세요?
+                                우리은행 시니어플러스 채용관이 함께 합니다.
+                                인생 제2모작의 시작!
+                                우리은행 시니어플러스 채용전문관에 오신것을 환영합니다.
+                                인크루트와 함께 시니어 채용정보를 한번에!
+                                이력서 작성 및 입사지원을 쉽고 빠르게!
+                                클릭하시면 시니어플러스 채용관 페이지로 이동합니다.
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="control">
-                    <div class="slide_btn_prev"></div>
+                <div class="controls">
+                    <button class="next"></button>
+                    <button class="prev"></button>
                     <div class="paging"></div>
-                    <div class="slide_btn_next"></div>
                 </div>
             </div>
         </section>
@@ -100,6 +144,26 @@
                             <a href="">바로가기</a>
                         </div>
                     </div>
+                </div>
+                <div class="btm">
+                    <article class="event">
+                        <h3>이벤트</h3>
+                        <img src="images/img_banner.jpg" alt="">
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </article>
+                    <article class="recom">
+                        <h3>시니어 추천 금융상품</h3>
+                        <div class="swiper mySwiper slide2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </article>
+                    <!-- 다른 목적을 갖고 있기 때문에 div가 아닌 article로 표현 -->
                 </div>
             </div>
         </section>

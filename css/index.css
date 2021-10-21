@@ -127,6 +127,53 @@ header .btm .spot button {
   color: #0066b3;
   font-size: 26px;
 }
+/* 슬라이드 */
+.visual img {
+  width: 100%;
+}
+.visual .controls {
+  padding: 0 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  z-index: 30;
+}
+.visual .controls > button {
+  width: 15px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}
+.visual .controls > button.next {
+  right: 0;
+  background: url(../images/btn_next.png);
+}
+.visual .controls > button.prev {
+  left: 0;
+  background: url(../images/btn_prev.png);
+}
+.visual .paging {
+  line-height: 25px;
+}
+.visual .paging span {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #d9d9d9;
+  transition: all 0.5s;
+  margin: 0 5px;
+  /* padding을 주게되면 색까지 포함해서 넓어지기 때문에 배경색이 있는 경우 margin 사용 */
+}
+.visual .paging span.swiper-pagination-bullet-active {
+  background: #288bcc;
+  width: 30px;
+  border-radius: 14px;
+  /* 높이만큼 radius 주면 소세지 모양이 됨 */
+}
+
 /* 콘텐츠 공통디자인 */
 .block > div {
   margin: 0 auto;
@@ -197,6 +244,38 @@ header .btm .spot button {
   border-radius: 7px;
   margin: 0 auto;
   /* 링크는 컬러가 안들어가기 때문에 직접지정해야함. */
+}
+.service .btm > article {
+  position: relative;
+  float: left;
+  width: 580px;
+  margin: 38px 0 0;
+}
+.service .btm h3 {
+  font-size: 26px;
+  color: #333;
+  padding: 0 0 28px;
+}
+.btn_more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 136px;
+  line-height: 38px;
+  /* position:absolute하면 block요소가 됨. block요소는 line-height를 주게 되면 높이도 같이 커지게 된다. */
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  text-align: center;
+  color: #8a8a8a;
+  font-size: 16px;
+}
+.btn_more::after {
+  content: url(../images/bu_arrow_right.png);
+  margin: 0 0 0 8px;
+}
+/* flex는 IE10이상 지원하지 않기 때문에 float 사용 */
+.service .event img {
+  width: 100%;
 }
 /* 
   1. 버튼과 링크의 차이점
